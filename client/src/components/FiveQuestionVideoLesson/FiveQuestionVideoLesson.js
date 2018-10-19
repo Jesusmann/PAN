@@ -6,7 +6,8 @@ import React from "react";
 // import certAnswers from '../../certAnswers.json'
 import "./FiveQuestionVideoLesson.css";
 import API from '../../utils/API';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import LessonQuestion from '../LessonQuestion/LessonQuestion';
 
 
 class FiveQuestionVideoLesson extends React.Component {
@@ -137,6 +138,12 @@ class FiveQuestionVideoLesson extends React.Component {
                             />
                             {(!this.state.linkToVideo && this.state.submitFlag) ? <div className="error-text">Link to Video required</div> : " "}
                         </div>
+                        < LessonQuestion />
+                        < LessonQuestion />
+                        < LessonQuestion />
+                        < LessonQuestion />
+             
+                        {/*
                         <div className="form-group">
                             Question 1 Pause Time: <br /> <input
                                 type="text"
@@ -196,7 +203,7 @@ class FiveQuestionVideoLesson extends React.Component {
                             {(!this.state.question1AnswerD && this.state.submitFlag) ? <div className="error-text">Question 1 answer D required</div> : " "}
                         </div>
                         <div className="form-group">
-                            {/* Make these radio buttons later */}
+                            //Make these radio buttons later
                             Question 1 Correct Answer: <br /> <textarea
                                 rows="4"
                                 cols="100"
@@ -206,7 +213,7 @@ class FiveQuestionVideoLesson extends React.Component {
                             />
                             {(!this.state.question1CorrectAnswer && this.state.submitFlag) ? <div className="error-text">Question 1 correct answer required</div> : " "}
                         </div>
-
+                        */}
 
                         <button type="button" className="btn btn-info" onClick={this.checkAnswers} id="Submit Button">SUBMIT</button>
                     </form>
